@@ -25,13 +25,19 @@ keys = [
         desc="Move window down in current stack "),
     Key([mod, "control"], "j", lazy.layout.shuffle_down(),
         desc="Move window up in current stack "),
+    Key([mod, "control"], "h", lazy.layout.shuffle_left(),
+        desc="Move window left in the current stack "),
+    Key([mod, "control"], "l", lazy.layout.shuffle_right(),
+        desc="Move window right in the current stack "),
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
 
-    # Switch between fullscreen in the current window
+    # Put the focused window to/from fullscreen mode
     Key([mod], "f", lazy.window.toggle_fullscreen()),
+    # Put the focused window to/from floating mode
+    Key([mod, "shift"], "f", lazy.window.toggle_floating()),
 
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate(),
@@ -48,10 +54,10 @@ keys = [
     #Explorados de archivos
     Key([mod], "e", lazy.spawn('thunar')),
     #Lanzador de aplicaciones
-    Key([mod], "m", lazy.spawn('rofi -show run -columns 2 -theme purple')),
+    Key([mod], "m", lazy.spawn('rofi -show drun -columns 1 -theme material')),
     #Captura de pantalla
     Key([mod], "s", lazy.spawn('scrot')),
-
+    
     #-------------------------Otros-------------------------------
 
     # Toggle between different layouts as defined below
@@ -78,6 +84,6 @@ keys = [
         "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     )),
 # Brillo
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("sudo brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("sudo brightnessctl set 10%-")),
 ]

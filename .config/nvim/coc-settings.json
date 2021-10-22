@@ -1,0 +1,22 @@
+{
+  "texlab.forwardSearch.executable": "zathura",
+  "texlab.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
+  "texlab.build.forwardSearchAfter": true,
+  "texlab.build.args": [
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-synctex=1",
+    "-outdir=./direcAux",
+    "%f"
+  ],
+  "texlab.auxDirectory": "./direcAux",
+
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
+  },
+
+  "clangd.enabled": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+  
+}

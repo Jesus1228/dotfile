@@ -26,8 +26,8 @@ workspaces = lambda: [
     separator(),
     widget.GroupBox(
         **base(fg='light'),
-        font='SpaceMono NF',
-        fontsize=19,
+        font='Hurmit NF',
+        fontsize=20,
         margin_y=3,
         margin_x=0,
         padding_y=8,
@@ -58,14 +58,15 @@ primary_widgets = [
     powerline('color4', 'dark'),
 
     icon(bg="color4", text=''), # Icon: nf-fa-download
-    
-    widget.Pacman(**base(bg='color4'), update_interval=1800),
+
+    widget.CheckUpdates(**base(bg='color4'), update_interval=1800,  distro='Ubuntu', restart_indicator='Restart'),
 
     powerline('color3', 'color4'),
 
-    icon(bg="color3", text='直'),  # Icon: nf-fa-feed
-    
+    icon(bg="color3", text=''),  # Icon: nf-fa-feed
+
     widget.Net(**base(bg='color3'),  interface="wlp1s0"),
+    #widget.CPU(**base(bg='color3')),
 
     powerline('color2', 'color3'),
 
@@ -98,8 +99,8 @@ secondary_widgets = [
 ]
 
 widget_defaults = {
-    'font': 'Hack NF Bold',
-    'fontsize': 14,
+    'font': 'Anonymice NF Bold',
+    'fontsize': 12,
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()

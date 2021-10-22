@@ -1,17 +1,20 @@
 # Example font config file. If you have these fonts installed you can apply them
 
 fonts:
-    UbuntuMono: UbuntuMono Nerd Font
-    Mononoki: mononoki Nerd Font
-    Agave: agave Nerd Font
+    Agave: agave Nerd Font 
+    Anonymice: Anonymice Nerd Font
     Caskaydia: Caskaydia Cove Nerd Font
-    Hurmit: Hurmit Nerd Font Mono
-    DaddyTime: DaddyTimeMono Nerd Font
-    Iosevka: Iosevka NF
-    Hack: Hack NF
-    SpaceMono: SpaceMono NF
-    Meslo: MesloLGL NF
+    Hurmit: Hurmit Nerd Font
+    DaddyTime: DaddyTimeMono Nerd Font 
+    Hack: Hack Nerd Font
+    SpaceMono: SpaceMono Nerd Font
+    Meslo: MesloLGL Nerd Font
+    #Cursive: Source Code Pro iCursive S12
     JetBrains:
         normal: JetBrains Mono Medium Nerd Font
         italic: JetBrains Mono Medium Nerd Font
         bold: JetBrains Mono ExtraBold Nerd Font
+    SourceCode:
+        normal: SauceCodePro Nerd Font
+        italic: Source Code Pro iCursive S12
+        bold: SauceCodePro Nerd Font

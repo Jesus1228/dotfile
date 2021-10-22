@@ -6,3 +6,5 @@ cbatticon -u 5 &
 volumeicon &
 #Compositor
 compton &
+#Wifi
+nm-applet &

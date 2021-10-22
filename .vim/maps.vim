@@ -1,5 +1,17 @@
 "Mapeo de la tecla lider
 let mapleader=" "
+"----------------------------------------------------
+
+"Fuzzi Finder keybindings
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>ag :Ag<CR>
+nnoremap <Leader>cs :Colors<CR>
+nnoremap <Leader>l :Lines<CR>
+nnoremap <Leader>z :BLines<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>cm :Commands<CR>
+"----------------------------------------------------
 
 "Atajos del modo normal
 nmap <Leader>s <Plug>(easymotion-s2)
@@ -11,21 +23,32 @@ nmap <Leader>k :bnext<CR>
 nmap <Leader>j :bprevious<CR>
 nmap <Leader>x :bdelete<CR>
 nnoremap <Leader>g /<++><Esc>
+"----------------------------------------------------
 
 "Atajos del modo insertar
-inoremap ii <Esc>
+inoremap <A-i> <Esc>
 inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 inoremap ;g <++><Esc>
+"----------------------------------------------------
 
 "Atajos del modo visial
 vnoremap <Leader>e <Esc>
 vnoremap <Leader>c I# <Esc>
 vnoremap <Leader>z I" <Esc>
+"----------------------------------------------------
+"Terminal Buffer
+tnoremap <Esc> <C-\><C-n>
+nnoremap <Leader>t :terminal<CR>
 
-"CoC
+
+"----------------------------------------------------
+
+"Undotree
+nnoremap <silent>zm :UndotreeToggle<CR>
+"---------------------------------------------------- CoC
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -33,6 +56,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)"
 nnoremap <Leader>d :CocDiagnostics<CR>
+"----------------------------------------------------
 
 " LaTex
 " Comandos generales
@@ -41,21 +65,21 @@ autocmd filetype tex nnoremap <Leader>c :CocCommand latex.Build<CR>
 autocmd filetype tex nnoremap <Leader>v :CocCommand latex.ForwardSearch<CR>
 
 "Bloques
-autocmd filetype tex inoremap sct \section{}<Esc>i
-autocmd filetype tex inoremap ssec \subsection{}<Esc>i
 autocmd filetype tex nnoremap <Leader>tem i\item
 autocmd filetype tex nnoremap <Leader>up i\usepackage{}<Esc>i
 autocmd filetype tex nnoremap <Leader>inc i\include{Portada}<Esc>
 autocmd filetype tex nnoremap <Leader>toc i\tableofcontents<Esc>
 
 "Formato
-autocmd filetype tex inoremap <Leader>bf \textbf{}<Esc>i
-autocmd filetype tex inoremap <Leader>it \textit{}<Esc>i
-autocmd filetype tex inoremap <Leader>tt \texttt{}<Esc>i
-autocmd filetype tex inoremap <Leader>sc \textsc{}<Esc>i
-autocmd filetype tex inoremap <Leader>bb \mathbb{}<Esc>i
+
+autocmd filetype tex inoremap <silent>bf \textbf{}<Esc>i
+autocmd filetype tex inoremap <silent>itc \textit{}<Esc>i
+autocmd filetype tex inoremap <silent>tt \texttt{}<Esc>i
+autocmd filetype tex inoremap <silent>tsc \textsc{}<Esc>i
+autocmd filetype tex inoremap <silent>bb \mathbb{}<Esc>i
 
 "Modo Matemático
-autocmd filetype tex inoremap mm \
-autocmd filetype tex inoremap forall \forall
-autocmd filetype tex inoremap ssi \leftrightarrow
+autocmd filetype tex inoremap nn \
+autocmd filetype tex inoremap <C-f> \forall
+autocmd filetype tex inoremap <C-s> \leftrightarrow
+autocmd filetype tex inoremap <A-m> $$<Esc>i
